@@ -14,8 +14,8 @@ class ToDoListVector{
     }
     void listask() {
     for (const auto& task : todo){
-        std::cout << "task: " << task << "\n";
-           Sleep(500);
+        std::cout << "task: " << task << "\n";  
+           Sleep(1000);
     }
     }
     
@@ -30,8 +30,8 @@ class ToDoListVector{
     int tasks;
     std::string task;
     while(true){
-    std::cout << "1.Add your work(Type 1)\n";
-    std::cout << "2.View work(Type 2)\n";
+    std::cout << "1.Add your task(Type 1)\n";
+    std::cout << "2.View your task(Type 2)\n";
     std::cout << "Your choice :";
     std::cin >> tasks;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -47,8 +47,9 @@ class ToDoListVector{
 
     }
     if (tasks == 2){
+        std::cout << "\n";
         todolistvector.listask();
-       
+       std::cout << "\n";
 
     }
 }
