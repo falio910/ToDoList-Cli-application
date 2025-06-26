@@ -8,12 +8,12 @@ class ToDoListVector{
     private:
     std::vector<std::string> todo;
     public:
-    void addtask(const std::string& task){
+    void addtask(std::string& task){
         todo.push_back(task);
         std::cout << "Task has been added\n";
     }
     void listask() {
-    for (const auto& task : todo){
+    for (std::string&task : todo){
         std::cout << "task: " << task << "\n";  
            Sleep(1000);
     }
